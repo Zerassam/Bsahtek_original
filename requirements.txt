@@ -20,6 +20,7 @@
 # NO INDENTICAL URLS WITH DIFFERENT METHODS. ALL URLS ARE UNIQUE
 # ^ this makes it so your login auth_required's don't fuck up
 
+pip>=25.2
 
 -i https://pypi.org/simple
 alembic==1.9.2
