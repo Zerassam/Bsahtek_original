@@ -1,0 +1,81 @@
+.restaurant-outermost-box {
+    width: 100%;
+}
+
+.owner-restaurant-card {
+    padding: 0 3%;
+}
+
+.owner-restaurant-back-to-my-account:hover {
+    text-decoration: underline;
+}
+
+.owner-restaurant-back-to-my-account {
+    padding-left: 9px;
+    cursor: pointer;
+}
+
+.please-add-item-to-restaurant {
+    margin: 20px 0 0 30px;
+    font-size: 17px;
+}
+
+.owner-rest-header {
+    margin-top: 5px;
+}
+
+.owner-rest-header-and-add-button {
+    font-size: 32px;
+    padding-top: 9px;
+    padding-left: 9px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.owner-rest-add-menu-item-button button {
+    color: #FFFFFF;
+    background-color: #08c464;
+    font-size: 17px;
+    padding: 10px 12px;
+    margin: 14px 0 10px 0;
+    border-radius: 7px;
+    border: none;
+}
+
+.owner-rest-add-menu-item-button button:hover {
+    cursor: pointer;
+    background-color: #07a051;
+}
+
+.restaurant-read-reviews {
+    text-decoration: underline;
+}
+
+.restaurant-read-reviews:hover {
+    cursor: pointer;
+}
+
+.restaurant-menu-items-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.restaurant-menu-item-card-holder {
+    width: 300px;
+    padding: 0px 20px 5px 0px;
+}
+
+.item-type-header {
+    font-size: 26px;
+    padding: 9px;
+}

@@ -1,0 +1,69 @@
+.reviewDiv {
+    border-top: 1px solid #2d2d2d;
+    width: 75%;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 15px;
+    padding: 20px 0;
+}
+
+#reviewStarsDiv {
+    font-size: 20px;
+}
+
+#reviewDateDiv {
+    color: grey;
+    overflow-x: auto;
+}
+
+#reviewTextDiv {
+    display: flex;
+    justify-content: left;
+    font-size: 20px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    overflow: auto;
+    word-break: break-all;
+}
+
+.leaveReviewButton {
+    margin: 25px 15px 30px 10px;
+}
+
+.deleteReviewButton {
+    margin: 15px 0;
+}
+
+.reviewModalButton button {
+    cursor: pointer;
+    display: flex;
+    background-color: white;
+    border: none;
+    display: flex;
+    font-size: 10pt;
+    grid-gap: 8px;
+    gap: 8px;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    margin-top: 5px;
+    border: 2px solid black;
+    padding: 5px 10px;
+}
+
+#reviewHeader {
+    margin-left: 9px;
+}
+
+#noReviewMessage {
+    margin-left: 9px;
+    border-top: .5px solid #2d2d2d;
+    padding: 19px 0;
+    border-bottom: .5px solid #2d2d2d;
+    width: 50%;
+}
+
+#restauranteerDiv {
+    margin-left: 9px;
+}
