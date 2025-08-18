@@ -1,7 +1,55 @@
-.env
+# ========================
+# Python / Flask
+# ========================
 __pycache__/
 *.py[cod]
-.venv
-.DS_Store
-.vscode/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+instance/
+.venv/
+env/
+venv/
+*.log
+
+# Flask specific
 app/dev.db
+
+# ========================
+# Environment
+# ========================
+.env
+.env.local
+.env.*.local
+
+# ========================
+# Mac / Linux / Windows
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# VS Code / IDEs
+# ========================
+.vscode/
+.idea/
+*.swp
+
+# ========================
+# Node / React
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnp.*
+.pnp.js
+
+# build outputs
+dist/
+build/
+.cache/
