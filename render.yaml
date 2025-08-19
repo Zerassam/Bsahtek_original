@@ -1,0 +1,52 @@
+# render.yaml - Bsahtek Mono-repo Deployment
+
+services:
+  - type: web
+    name: bsahtek-flask
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: |
+      python3.11 -m pip install --upgrade pip setuptools wheel
+      python3.11 -m pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers 3 --bind 0.0.0.0:$PORT --timeout 120
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        value: "postgresql://postgresql_bsahtek_user:1tQg5satOX9eMOHhS06sgWotLqvsiVdg@dpg-d2esaeidbo4c738q7120-a/postgresql_bsahtek"
+      - key: FLASK_ENV
+        value: "production"
+      - key: SQLALCHEMY_ECHO
+        value: "False"
+      - key: INSTANCE_PATH
+        value: "instance"
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+
+  - type: static
+    name: bsahtek-react
+    env: static
+    plan: free
+    buildCommand: |
+      cd react-app
+      npm ci
+      npm run build
+    staticPublishPath: react-app/build
+    autoDeploy: true
+    envVars:
+      - key: REACT_APP_API_URL
+        value: "https://bsahtek-flask.onrender.com" #  √ﬂœ √‰ «”„ «·Œœ„… Flask „ÿ«»ﬁ
+
+databases:
+  - name: bsahtek-postgres
+    engine: postgresql
+    plan: free
+    region: oregon
+    version: "15"
+    envVarName: DATABASE_URL
+
+healthChecks:
+  - service: bsahtek-flask
+    path: /health
+    interval: 60
+    timeout: 5
