@@ -31,7 +31,7 @@ flask-login==0.6.2
 flask-migrate==4.0.2
 flask-sqlalchemy==3.0.2
 flask-wtf==1.1.1
-greenlet==3.0.3
+greenlet==2.0.2
 gunicorn==20.1.0
 itsdangerous==2.1.2
 jinja2==3.1.2
@@ -45,3 +45,14 @@ sqlalchemy==1.4.46
 werkzeug==2.2.2
 wtforms==3.0.1
 wheel==0.38.4
+boto3==1.28.43
+botocore==1.31.43
+dnspython==2.4.2
+email-validator==2.0.0.post2
+idna==3.4
+importlib-metadata==6.8.0
+jmespath==1.0.1
+s3transfer==0.6.2
+setuptools==68.2.0
+urllib3==1.26.16
+zipp==3.16.2
