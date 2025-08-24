@@ -1,0 +1,43 @@
+{
+  "name": "Bsahtek",
+  "description": "Bsahtek is a full-stack food ordering platform with a Flask backend and React frontend.",
+  "version": "1.0.0",
+  "backend": {
+    "framework": "Flask",
+    "language": "Python 3",
+    "endpoints": {
+      "/api/users": "User management (create, update, delete, get users)",
+      "/api/auth": "Authentication (signup, login, logout, token refresh)",
+      "/api/session": "Session handling for logged-in users",
+      "/api/restaurants": "CRUD operations for restaurants",
+      "/api/menu-items": "CRUD operations for menu items",
+      "/api/reviews": "Manage customer reviews",
+      "/api/orders": "Place and manage orders",
+      "/api/images": "Upload and retrieve images",
+      "/api/docs": "Auto-generated API documentation (Swagger/Redoc)"
+    }
+  },
+  "frontend": {
+    "framework": "React",
+    "language": "JavaScript",
+    "root": "/",
+    "build_folder": "react-app/build",
+    "entrypoint": "index.html"
+  },
+  "security": {
+    "csrf_cookie": "csrf_token",
+    "https_only": true,
+    "authentication": "JWT with refresh token"
+  },
+  "deployment": {
+    "docker": true,
+    "render": true,
+    "heroku": true
+  },
+  "metadata": {
+    "author": "Zerassam",
+    "repository": "https://github.com/Zerassam/Bsahtek_original",
+    "license": "MIT",
+    "created": "2025-08-24"
+  }
+}
