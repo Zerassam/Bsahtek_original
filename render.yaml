@@ -13,9 +13,7 @@ services:
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
-        fromDatabase:
-          name: bsahtek-postgres
-          property: connectionString
+        value: "postgresql://postgresql_bsahtek_user:1tQg5satOX9eMOHhS06sgWotLqvsiVdg@dpg-d2esaeidbo4c738q7120-a/postgresql_bsahtek"
       - key: FLASK_ENV
         value: "production"
       - key: SQLALCHEMY_ECHO
@@ -23,7 +21,7 @@ services:
       - key: INSTANCE_PATH
         value: "instance"
       - key: PYTHON_VERSION
-        value: "3.11.9"
+        value: "3.11"
 
   - type: static
     name: bsahtek-react
