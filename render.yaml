@@ -7,13 +7,15 @@ services:
     plan: free
     region: oregon
     buildCommand: |
-      python3.11 -m pip install --upgrade pip setuptools wheel
-      python3.11 -m pip install -r requirements.txt
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
     startCommand: gunicorn app:app --workers 3 --bind 0.0.0.0:$PORT --timeout 120
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
-        value: "postgresql://postgresql_bsahtek_user:1tQg5satOX9eMOHhS06sgWotLqvsiVdg@dpg-d2esaeidbo4c738q7120-a/postgresql_bsahtek"
+        fromDatabase:
+          name: bsahtek-postgres
+          property: connectionString
       - key: FLASK_ENV
         value: "production"
       - key: SQLALCHEMY_ECHO
@@ -35,7 +37,7 @@ services:
     autoDeploy: true
     envVars:
       - key: REACT_APP_API_URL
-        value: "https://bsahtek-flask.onrender.com" #  √ﬂœ √‰ «”„ «·Œœ„… Flask „ÿ«»ﬁ
+        value: "https://bsahtek-flask.onrender.com"
 
 databases:
   - name: bsahtek-postgres
